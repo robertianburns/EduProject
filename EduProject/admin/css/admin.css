@@ -1,0 +1,229 @@
+/* BASIC
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    align-items: center;
+    background: url(images/geometryadmin.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+/* BUTTONS
+   ========================================================================== */
+
+.button {
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(190, 190, 190);
+    border-radius: 4px;
+    border-width: 0.5px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.0892857143em;
+    margin: 30px;
+    min-width: 64px;
+    padding: 15px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s;
+    vertical-align: middle;
+}
+
+
+/* Highlight and ripple */
+
+.button::before {
+    transition: opacity 0.2s;
+}
+
+.button::after {
+    background: radial-gradient(circle at center, currentColor 1%, transparent 1%) center/10000% 10000% no-repeat;
+    transition: opacity 1s, background-size 0.5s;
+}
+
+
+/* Hover and focus */
+
+.button:hover,
+.button:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.button:hover::before {
+    opacity: 0.08;
+}
+
+.button:focus::before {
+    opacity: 0.24;
+}
+
+.button:hover:focus::before {
+    opacity: 0.32;
+}
+
+
+/* blue-button is used as a confirm/favourable action button */
+
+.blue-button {
+    background: #0400ff;
+    color: #ffffff;
+}
+
+.blue-button:hover {
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    background: #4551ff;
+    transition: 0.3s;
+}
+
+
+/* red-button is used as an alert/danger button */
+
+.red-button {
+    background: #ff0000;
+    color: #fff;
+}
+
+.red-button:hover {
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    background: #ff4040;
+    transition: 0.3s;
+}
+
+
+/* MISC
+   ========================================================================== */
+
+.white-box {
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 0 7px 7px 0 rgba(0, 0, 0, .16), 0 0 7px 0 rgba(0, 0, 0, .12);
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.34rem;
+    box-shadow: 0 7px 7px 0 rgba(0, 0, 0, .16), 0 0 7px 0 rgba(0, 0, 0, .12);
+    margin: 7px 7px 20px 7px;
+    padding: 25px;
+}
+
+.parent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.child {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.margin {
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@media(max-width: 1200px) {
+    .margin {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media(max-width: 900px) {
+    .margin {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media(max-width: 500px) {
+    .margin {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
+
+@media(max-width: 370px) {
+    .margin {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+
+/* TABLE
+   ========================================================================== */
+
+.tableContainer {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid rgb(95, 95, 95);
+    overflow-x: scroll;
+    width: 100%;
+}
+
+table tr {
+    background-color: #f3f3f3;
+    border: 1px solid rgb(156, 156, 156);
+    padding: .3em;
+}
+
+table th,
+table td {
+    padding: .6em;
+    text-align: center;
+}
+
+@media (min-width: 1300px) and (max-width: 1555px) {
+
+    td:nth-child(9),th:nth-child(9)  {
+        display: none;
+    }
+
+    td:nth-child(8),th:nth-child(8)  {
+        display: none;
+    }
+}
+
+
+@media (min-width: 360px) and (max-width: 1300px) {
+
+    td:nth-child(9),th:nth-child(9)  {
+        display: none;
+    }
+
+    td:nth-child(8),th:nth-child(8)  {
+        display: none;
+    }
+}
