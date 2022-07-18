@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 23, 2022 at 03:06 PM
--- Server version: 5.7.37
--- PHP Version: 7.4.28
+-- Generation Time: May 05, 2022 at 10:26 PM
+-- Server version: 5.7.38
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,6 +40,7 @@ CREATE TABLE `accounts_details` (
 --
 
 INSERT INTO `accounts_details` (`id`, `username`, `password`, `experience`) VALUES
+(32, 'bluegreen', '$2y$10$O2z6gIZ3KIcxPWkjtIrhcOZN5g9K7X.eeOK6stq8vDq0OGBYuCOEO', 0),
 (31, 'eggplant', '$2y$10$ufgFQcrIjhJSRYKRdvkc3uWqgUs0ESy2Y2hHKNbQoeY/qdNxni4mG', 250),
 (30, 'coffeecake', '$2y$10$i8zFCXVL2yv3rE6HcI.sXeJI.hL7tPGcNCYFF8i//KPmResPzE2UW', 90),
 (29, 'Brownrice', '$2y$10$rXLOb.3hd0zSnrvrw2z0cOcyWxxf36I0e69l5boKyu0P7.oIUAvnW', 150),
@@ -77,7 +78,8 @@ INSERT INTO `accounts_progress` (`id`, `username`, `webdev_html_done`, `webdev_c
 (15, 'BroccoliBat', 0, 1, 1, 0, 0, 0, 0),
 (16, 'Brownrice', 0, 1, 0, 0, 0, 0, 0),
 (17, 'coffeecake', 0, 0, 1, 0, 0, 1, 0),
-(18, 'eggplant', 1, 1, 0, 1, 1, 0, 1);
+(18, 'eggplant', 1, 1, 0, 1, 1, 0, 1),
+(19, 'bluegreen', 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -98,7 +100,7 @@ CREATE TABLE `admin_details` (
 INSERT INTO `admin_details` (`id`, `username`, `password`) VALUES
 (4, 'adminuser', '$2y$10$4iw6s61rxERxjC6g8HJwJ.WrtbFiHQhX3EDTYhDKpiz5vkKrKC3/u'),
 (3, 'admin', '$2y$10$cWL.BMIF/iI5DiJYsnghPu0SHPlt6IzcElE5s/8q5cDP1jg.k6lx2'),
-(5, 'admin1', '$2y$10$2OYBqB08znkzDyckYGGyG.lC7ueyDXyLtQhXOFzdDga7OqRx0IvdW');
+(5, 'admin1', '$2y$10$hJ6Uvt5DyCgIGmq6jrB8n.C9KZO.94Ns6or5qNmu4VKI9t1uQADo2');
 
 -- --------------------------------------------------------
 
@@ -198,7 +200,7 @@ INSERT INTO `quiz` (`id`, `question`, `answer1`, `answer2`, `answer3`, `answer4`
 (45, 'What do you write at the end of an integer to create a BigInt?', 'big', 'n', 'b', 'bInt', 2, 'webdev'),
 (46, 'How many values does a Boolean data type have?', '0', '2', '3', '5', 2, 'webdev'),
 (47, 'Which one of these is a non-primitive data type?', 'Null', 'String', 'Object', 'Boolean', 3, 'webdev'),
-(48, 'What are the categories for control structures?', 'If, else, and switch', 'Iteration, while, and loop', 'Block, sequence, and selection', 'Iteration, selection, and sequence', 4, 'webdev'),
+(48, 'What is not a control structure category?', 'Switch', 'Iteration', 'Selection', 'Sequence', 1, 'webdev'),
 (49, 'What logical operator is \'&&\'?', 'and', 'or', 'not', 'also', 1, 'webdev'),
 (50, 'What logical operator is \'||\'?', 'also', 'or', 'not', 'and', 2, 'webdev'),
 (51, 'What logical operator is \'!\'?', 'or', 'also', 'not', 'and', 3, 'webdev'),
@@ -268,13 +270,13 @@ ALTER TABLE `quiz`
 -- AUTO_INCREMENT for table `accounts_details`
 --
 ALTER TABLE `accounts_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `accounts_progress`
 --
 ALTER TABLE `accounts_progress`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `admin_details`
